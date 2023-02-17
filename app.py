@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -9,19 +9,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
-
-@app.route("/ruta2")
-def ruta2():
-    return "<p>Acceso a la ruta 2</p>"
-
-@app.route("/personas/<persona>")
-def personas(persona):
-    return "Bienvenido " + persona
-
-@app.route("/plantilla")
-def plantilla():
-    return render_template("pagina1.html")
+    return "<p>Bienvenido al programa de envio de correos automaticos</p>"
 
 @app.route("/envio-correo")
 def email():
